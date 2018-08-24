@@ -1,6 +1,6 @@
-import { SIGN_IN, SIGN_OUT, CreateUserStatusAction } from '../actions/actions';
+import { SIGN_IN, SIGN_OUT, CreateUserStatus } from '../actions/user';
 
-export default function User(
+function User(
   state = {
     id: null,
     name: null,
@@ -12,14 +12,12 @@ export default function User(
 ) {
   switch (action.type) {
     case SIGN_IN:
-      return Object.assign({}, state, CreateUserStatusAction(SIGN_IN, SIGN_IN));
+      return Object.assign({}, state, CreateUserStatus(SIGN_IN, SIGN_IN));
     case SIGN_OUT:
-      return Object.assign(
-        {},
-        state,
-        CreateUserStatusAction(SIGN_OUT, SIGN_OUT),
-      );
+      return Object.assign({}, state, CreateUserStatus(SIGN_OUT, SIGN_OUT));
     default:
       return state;
   }
 }
+
+export default User;

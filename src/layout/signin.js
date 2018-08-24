@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-export default class SignIn extends Component {
+class SignIn extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   render() {
     return (
       <div>
@@ -11,3 +21,12 @@ export default class SignIn extends Component {
     );
   }
 }
+
+const mapStateToProps = state => state;
+
+const mapDispatchToProps = {};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SignIn);

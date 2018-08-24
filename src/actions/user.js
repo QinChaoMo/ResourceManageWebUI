@@ -1,9 +1,9 @@
 export const SIGN_IN = 'SIGN_IN';
 export const SIGN_OUT = 'SIGN_OUT';
 
-export function CreateUserStatusAction(type, status) {
+export function CreateUserStatus(actionType, status) {
   return {
-    type,
+    type: actionType,
     status,
   };
 }
