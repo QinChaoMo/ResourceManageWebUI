@@ -36,8 +36,8 @@
     "webpack-dev-server": "^3.1.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --config webpack.config.js --open",
+    "start": "npm run lint && webpack-dev-server --mode development --config webpack.config.js --open",
     "build": "webpack --mode production",
-    "lint": "eslint --fix .exlintrc"
+    "lint": "eslint src/ mock/"
   }
 }
