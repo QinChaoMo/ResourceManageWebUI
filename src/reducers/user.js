@@ -1,23 +1,29 @@
-import { SIGN_IN, SIGN_OUT, CreateUserStatus } from '../actions/user';
+import {
+  SIGN_IN,
+  SIGN_OUT,
+  CreateSignInAction,
+  CreateSignOutAction,
+} from '../actions/user';
 
-function User(
-  state = {
+/**
+ * {
     id: null,
     name: null,
     roule: null,
     theme: 'dark',
     status: null,
-  },
-  action,
-) {
+ * }
+ */
+
+export const initUserState = null;
+
+export function User(state = initUserState, action) {
   switch (action.type) {
     case SIGN_IN:
-      return Object.assign({}, state, CreateUserStatus(SIGN_IN, SIGN_IN));
+      return Object.assign({}, state, CreateSignInAction());
     case SIGN_OUT:
-      return Object.assign({}, state, CreateUserStatus(SIGN_OUT, SIGN_OUT));
+      return Object.assign({}, state, CreateSignOutAction());
     default:
       return state;
   }
 }
-
-export default User;

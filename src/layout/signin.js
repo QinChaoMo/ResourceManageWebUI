@@ -8,9 +8,7 @@ class SignIn extends Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    console.log(this.props);
-  }
+  componentDidMount() {}
 
   render() {
     return (
