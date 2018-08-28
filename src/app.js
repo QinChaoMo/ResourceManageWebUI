@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
 import RootRouter from './router';
@@ -8,17 +8,10 @@ if (process.env.NODE_ENV === 'development') {
   mockAuth();
 }
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <Provider store={store}>
-        <RootRouter />
-      </Provider>
-    );
-  }
+export default function App() {
+  return (
+    <Provider store={store}>
+      <RootRouter />
+    </Provider>
+  );
 }

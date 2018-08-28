@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import logo from './header.svg';
 import './signin.css';
 
@@ -24,6 +25,8 @@ class SignIn extends Component {
 const mapStateToProps = state => state;
 
 const mapDispatchToProps = {};
+
+SignIn.propTypes = {};
 
 export default connect(
   mapStateToProps,
