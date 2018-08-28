@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React from 'react';
 import Main from './layout/main';
-import SignIn from './layout/signin';
+import SignIn from './layout/signin/signin';
 
 const RootRouter = () => (
   <BrowserRouter>
